@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <button id="new-book">NEW BOOK</button>
+    <form id="form-container" class="hidden" action="">
+
+        <div>
+            <label for="title">Book title</label>
+            <input type="text" name="title" id="title">
+        </div>
+
+        <div>
+            <label for="author">Book's author:</label>
+            <input type="text" name="author" id="author">
+        </div>
+
+        <div>
+            <label for="pages">Number of pages:</label>
+            <input type="number" name="pages" id="pages">
+        </div>
+
+        <div>
+            <fieldset>
+                <legend>Have you read the book?</legend>
+
+                <label for="no">No</label>
+                <input type="radio" name="read" id="no" value="no">
+
+                <label for="yes">Yes</label>
+                <input checked type="radio" name="read" id="yes" value="yes">
+            </fieldset>
+        </div>
+
+        <button id="submit-button" type="submit">Submit</button>
+
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Pages</th>
+                <th>Have I read</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+            
+        </tbody>
+    </table>
+
+</body>
+</html>

@@ -29,6 +29,13 @@ Book.prototype.haveIRead = function(readOrNo) {
 
 document.getElementById('submit-button').addEventListener('click', (event) => {
     event.preventDefault();
+    const requiredInputs = document.querySelectorAll('input[required]');
+
+    for(let requiredInp of requiredInputs) {
+        if(requiredInp.value === '') {
+            return;
+        }
+    }
 
     addBookToLibrary();
 
@@ -36,6 +43,7 @@ document.getElementById('submit-button').addEventListener('click', (event) => {
     for (let i = 0; i < inputFields.length; i++) {
         inputFields[i].value = '';
     }
+    
 })
 
 
